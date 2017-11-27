@@ -1,0 +1,21 @@
+{
+    "name": "silici0/vtex",
+    "description": "Vtex api access for PHP",
+    "type": "library",
+    "require": {
+        "curl/curl": "^1.8",
+        "hassankhan/config": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Rafael Cunha",
+            "email": "silici0@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "silici0\\Vtex\\" : "src/"
+        }
+    }
+}
