@@ -12,7 +12,7 @@
             "email": "silici0@gmail.com"
         }
     ],
-    "minimum-stability": "dev-master",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "silici0\\Vtex\\" : "src/"
