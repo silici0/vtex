@@ -10,7 +10,7 @@ class Orders {
 
     public function __construct()
     {
-        $this->curl = Curl\Curl();
+        $this->curl = new Curl();
     }
 
     public function getListOrders($params, $conf)
