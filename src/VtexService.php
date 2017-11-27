@@ -1,7 +1,7 @@
 <?php namespace silici0\Vtex;
 
 use Noodlehaus\Config;
-use silici0\Vtex\Oms;
+use silici0\Vtex\Oms\Orders;
 
 class VtexService{
 
