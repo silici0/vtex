@@ -19,11 +19,11 @@ class Orders {
         $this->curl->setHeader('contet-type', 'application/json');
         $this->curl->setHeader('x-vtex-api-appkey', $conf->get('AppKey'));
         $this->curl->setHeader('x-vtex-api-apptoken', $conf->get('AppToken'));
-        $this->curl->get('https://'.$conf->get('accountName').'.'.$conf->get('environment').".com.br/api/oms/pvt/orders".http_build_query($params));
+        $this->curl->get('https://'.$conf->get('accountName').'.'.$conf->get('environment').".com.br/api/oms/pvt/orders?".http_build_query($params));
         if ($this->curl->error)
             return $this->treatError();
         else
-            return json_encode($this->response);
+            return json_encode($this->curl->response);
     }
 
     private function treatError()
