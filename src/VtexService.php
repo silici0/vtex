@@ -49,4 +49,10 @@ class VtexService{
         $this->masterData = new DataEntities();
         return $this->masterData->getListDataEntities($this->config);
     }
+
+    public function getMasterDataClientById()
+    {
+        $this->masterData = new DataEntities();
+        return $this->masterData->getClientDatafromEntityById('', $this->config);
+    }
 }
