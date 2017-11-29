@@ -10,7 +10,7 @@ class VtexService{
     
     public function __construct()
     {
-        $this->config = Config::load('config.json');
+        $this->config = Config::load('config-vtex.json');
     }
 
 
