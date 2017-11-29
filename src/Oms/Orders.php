@@ -23,7 +23,20 @@ class Orders {
         if ($this->curl->error)
             return $this->treatError();
         else
-            return json_encode($this->curl->response);
+            return json_decode($this->curl->response);
+    }
+
+    public function getOrderById($ID, $conf)
+    {
+        $this->curl->setHeader('accept', 'application/json');
+        $this->curl->setHeader('contet-type', 'application/json');
+        $this->curl->setHeader('x-vtex-api-appkey', $conf->get('AppKey'));
+        $this->curl->setHeader('x-vtex-api-apptoken', $conf->get('AppToken'));
+        $this->curl->get('https://'.$conf->get('accountName').'.'.$conf->get('environment').".com.br/api/oms/pvt/orders/".$ID);
+        if ($this->curl->error)
+            return $this->treatError();
+        else
+            return json_decode($this->curl->response);
     }
 
     private function treatError()
