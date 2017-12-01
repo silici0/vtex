@@ -30,5 +30,10 @@ $v = new VtexService();
 $params = array();
 $params['orderBy'] = "orderId,desc";
 $params['f_shippingEstimate'] = "2.days";
-var_dump( $v->getOmsListOrders($params) );
+$repositories = $v->getOmsListOrders($params);
+
+echo "Found " . count($repositories) . " results:\n";
+foreach ($repositories as $repo) {
+    echo $repo->orderId;
+}
 ```

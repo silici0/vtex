@@ -4,7 +4,8 @@
     "type": "library",
     "require": {
         "curl/curl": "^1.8",
-        "hassankhan/config": "^0.11.2"
+        "hassankhan/config": "^0.11.2",
+        "elliotchance/iterator": "^1.1"
     },
     "authors": [
         {

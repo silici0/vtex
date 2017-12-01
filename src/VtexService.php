@@ -24,9 +24,7 @@ class VtexService{
      */
     public function getOmsListOrders($params)
     {
-        return new OrdersList($params);
-        // $this->oms = new Orders();
-        // return $this->oms->getListOrders($params, $this->config);
+        return new OrdersList($params, $this->config);
     }
 
     /**
