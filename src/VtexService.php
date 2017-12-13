@@ -11,9 +11,12 @@ class VtexService{
     private $oms;
     private $masterData;
     
-    public function __construct()
+    public function __construct($path = null)
     {
-        $this->config = Config::load('config-vtex.json');
+        if (!is_null($path))
+            $this->config = Config::load($path.'config-vtex.json');
+        else
+            $this->config = Config::load('config-vtex.json');
     }
 
     /**

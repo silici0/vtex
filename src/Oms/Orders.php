@@ -13,19 +13,6 @@ class Orders {
         $this->curl = new Curl();
     }
 
-    public function getListOrders($params, $conf)
-    {
-        $this->curl->setHeader('accept', 'application/json');
-        $this->curl->setHeader('contet-type', 'application/json');
-        $this->curl->setHeader('x-vtex-api-appkey', $conf->get('AppKey'));
-        $this->curl->setHeader('x-vtex-api-apptoken', $conf->get('AppToken'));
-        $this->curl->get('https://'.$conf->get('accountName').'.'.$conf->get('environment').".com.br/api/oms/pvt/orders?".http_build_query($params));
-        if ($this->curl->error)
-            return $this->treatError();
-        else
-            return json_decode($this->curl->response);
-    }
-
     public function getOrderById($ID, $conf)
     {
         $this->curl->setHeader('accept', 'application/json');
