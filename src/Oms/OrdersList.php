@@ -40,7 +40,7 @@ class OrdersList extends AbstractPagedIterator
         if ($this->curl->error)
             return $this->treatError();
         else {
-            $result = json_decode($this->curl->response);
+            $result = json_decode($this->curl->response, true);
             $this->totalSize = $result->paging->total;
             return $result->list;
         }

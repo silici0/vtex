@@ -23,7 +23,7 @@ class Orders {
         if ($this->curl->error)
             return $this->treatError();
         else
-            return json_decode($this->curl->response);
+            return json_decode($this->curl->response, true);
     }
 
     private function treatError()
