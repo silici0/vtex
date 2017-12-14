@@ -64,4 +64,18 @@ class VtexService{
         $this->masterData = new DataEntities();
         return $this->masterData->getClientDatafromEntityById($id, $this->config);
     }
+
+    /**
+     * https://documenter.getpostman.com/view/164907/masterdata-api-v102/2TqWsD#1df0dfd0-8859-4fe5-a77f-87c4bf35aa8c
+     *
+     * @param  string $id example: "email@email.com"
+     * @return Object [Object from json decode vtex response]
+     */
+    public function getMasterDataClientByEmail($email)
+    {
+        $this->masterData = new DataEntities();
+        return $this->masterData->getClientDatafromEntityByEmail($email, $this->config);
+    }
+
+
 }
