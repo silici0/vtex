@@ -54,6 +54,17 @@ class VtexService{
     }
 
     /**
+     * https://documenter.getpostman.com/view/164907/masterdata-api-v102/2TqWsD#9a2a98aa-1041-4fe9-ab8c-2f80177e5bde
+     *
+     * @return Object [Object from json decode vtex response]
+     */
+    public function getMasterDataEntityStructure($acronym)
+    {
+        $this->masterData = new DataEntities();
+        return $this->masterData->getDataEntityStructure($this->config, $acronym);
+    }
+
+    /**
      * https://documenter.getpostman.com/view/164907/masterdata-api-v102/2TqWsD#1df0dfd0-8859-4fe5-a77f-87c4bf35aa8c
      *
      * @param  string $id example: "539a912d-9e4b-442c-a9f3-5d1a0525h92a"
