@@ -5,7 +5,7 @@ This library provides an objected-oriented wrapper of the PHP classes to access 
 ## Installation
 
 ```
-composer required silici0/vtex:dev-master
+composer require silici0/vtex:dev-master
 ```
 
 ## Configuration
